@@ -8,12 +8,19 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+
+import org.jdom2.Document;
+import org.jdom2.Element;
+import org.jdom2.input.SAXBuilder;
+import org.jdom2.output.Format;
+import org.jdom2.output.XMLOutputter;
+
 import main.Thinker;
-import org.jdom.Document;
-import org.jdom.Element;
-import org.jdom.input.SAXBuilder;
-import org.jdom.output.Format;
-import org.jdom.output.XMLOutputter;
+//import org.jdom.Document;
+//import org.jdom.Element;
+//import org.jdom.input.SAXBuilder;
+//import org.jdom.output.Format;
+//import org.jdom.output.XMLOutputter;
 
 import typeOfMotion.TypeOfMotionAnalysis;
 import data.Metrics;
@@ -385,7 +392,7 @@ public class ProjectManager
 				
 			    // Vamos a serializar el XML  
 		        // Lo primero es obtener el formato de salida  
-		        // Partimos del "Formato bonito", aunque también existe el plano y el compacto  
+		        // Partimos del "Formato bonito", aunque tambiï¿½n existe el plano y el compacto  
 			    Format format = Format.getPrettyFormat();  
 		        // Creamos el serializador con el formato deseado  
 		        XMLOutputter xmloutputter = new XMLOutputter(format);  
