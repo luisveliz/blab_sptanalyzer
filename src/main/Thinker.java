@@ -19,7 +19,6 @@ import particleTracker.ParticleTracker;
 import simulator.Simulator;
 import twoStateDiffusion.HMMAnalysis;
 import typeOfMotion.TypeOfMotionAnalysis;
-import animation.Animation;
 import data.Frame;
 import data.Subtrajectory;
 import data.TrajSet;
@@ -57,7 +56,6 @@ public class Thinker
 	private OverTime overTime;
 	private Histograms histograms;
 	private Direction direction;
-	private Animation animation;
 	
 	//Status
 	public boolean trajTableLastClicked=true;
@@ -277,14 +275,7 @@ public class Thinker
 			direction= new Direction(this);
 		direction.updateDirectionChart();
 	}
-	public void jMenu_Animation()
-	{
-		if(animation!=null)
-			animation.openGUI();
-		else
-			animation = new Animation(this);
-//		animation.updateDirectionChart();
-	}
+
 	
 	/*------------------------------------------------------------*/
 	public void filters_Trajectories_stateChanged()
